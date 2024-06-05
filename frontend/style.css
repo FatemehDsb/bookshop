@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Color theme */
+.light {
+    --background-color: #ffbf00;
+    --text-color: #000000;
+}
+.dark {
+    --background-color: #11154a;
+    --text-color: #ffffff;
+}
+.blue {
+    --background-color: #0000ff;
+    --text-color: #ffffff;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0px 100px;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.headerDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.header h2{
+    font-family: "Gloria Hallelujah", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+  }
+  
+
+.headerDiv a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.headerDiv a:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-color: var(--text-color);
+}
+
+#bookDuckText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    p{
+        font-size: 50px;
+    }
+}
+
+#profileLinkDiv {
+    display: none;
+    /* background-color: #dc3545; */
+    border-radius: 100px;
+    padding: 5px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+/* Home button */
+#homeLink {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#loginLogoutDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+/* Login button */
+#loginLink {
+    font-size: 1em;
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#loginLink:hover {
+    background-color: white;
+    color: #28a745;
+    border-color: #28a745;
+}
+
+/* Logout button */
+#logoutLink {
+    font-size: 1em;
+    background-color: #dc3545;
+    color: white;
+    border: 2px solid #dc3545;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#logoutLink:hover {
+    background-color: white;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+#renderedBooksDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Book cart */
+.book-cart {
+    width: 200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+.bookText{
+    font-weight: bold;
+    font-size: 13px;
+}
+#bookTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+#bookAuthor{
+    font-style: italic;
+}
+.book-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-cart img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.book-cart p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Book title */
+.book-cart p.title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Book author */
+.book-cart p.author {
+    font-size: 1em;
+    font-style: italic;
+    color: #555;
+}
+
+/* Book details */
+.book-cart p.details {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Book rating */
+.book-cart p.rating {
+    font-size: 1em;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+/* Modal */
+#modalRegisterLogin {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: rgba(225, 225, 225, 0.832);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#registerDiv, #loginDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.star {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: gray;
+}
+
+.checked {
+    color: orange;
+}
+
+/* Profile Page */
+.mainContentProfilePage {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+#toReadDiv, #ratedDiv {
+    width: 78%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+}
+
+#sideBar {
+    width: 20%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#sideBar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#sideBar a:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+#readingList, #ratedList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

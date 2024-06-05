@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+      integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+ 
+    <!-- <iframe src="header.html" frameborder="0" scrolling="no" width="100%" height="100"></iframe> -->
+    <header>
+        <div class="headerDiv">
+            <div id="bookDuckText"><a id="homeLink" href="index.html"><img src="funny-duck-3d-illustration.jpg" width="100px"></a>
+                <p>BOOK DUCKS</p>
+            </div>
+            <div class="header"></div>
+            <div id="profileLinkDiv">
+                <a href="profilePage.html"><img src="freepik-export-20240604172737yd2Y.png" width="30px"></a>
+                <p>Profile</p>
+            </div>
+            <div id="loginLogoutDiv">
+                <div><a id="loginLink">login</a></div> 
+                <div><a id="logoutLink">Log out</a></div>
+            </div>
+        </div>
+    </header>     
+
+    <div id="modalRegisterLogin">
+        <span id="closeModal">X</span>
+        <div id="registerDiv">
+            <input type="text" placeholder="Username" id="registerUsername">
+            <input type="email" placeholder="Email" id="registerEmail">
+            <input type="password" placeholder="Password" id="registerPassword">
+            <button id="registerBtn">Register</button>
+        </div>
+        <div id="loginDiv">
+            <input type="text" placeholder="Username or Email" id="loginUser">
+            <input type="password" placeholder="Password" id="loginPassword">
+            <button id="loginBtn">Log in</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="renderedBooksDiv"></div>
+    </div>
+    
+    <footer></footer>
+    
+</body>
+</html>

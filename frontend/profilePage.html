@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProfilePage</title>
+    <link href="style.css" rel="stylesheet">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+      integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="headerDiv">
+        <div id="bookDuckText"><a id="homeLink" href="index.html"><img src="funny-duck-3d-illustration.jpg" width="100px"></a>
+            <p>BOOK DUCKS</p>
+        </div>
+        <div class="header"></div>
+        <div id="loginLogoutDiv">
+            <div><a id="loginLink">login</a></div> 
+            <div><a id="logoutLink">Log out</a></div>
+        </div>
+    </div>
+</header>   
+   
+<div class="mainContentProfilePage">
+
+  <div id="sideBar">
+    <a href="#" id="toReadListLink">To Reads</a>
+    <a href="#" id="ratedLink">Rated</a>
+  </div>
+    
+    <div id="toReadDiv">
+      <h3>To read list</h3>
+      <select id="readingSortCriteria" >
+        <option selected disabled>Sorting</option>
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+      </select>
+      <div id="readingList"></div>
+    </div>
+
+    <div id="ratedDiv">
+      <h3>Your rated books</h3>
+      <select id="ratingSortCriteria" >
+        <option selected disabled>Sorting</option>
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="rating">rating</option>
+      </select>
+      <div id="ratedList"></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "theme_settings",
+  "info": {
+    "singularName": "theme-setting",
+    "pluralName": "theme-settings",
+    "displayName": "ThemeSetting"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "selectedTheme": {
+      "type": "enumeration",
+      "enum": [
+        "light ",
+        "dark",
+        "blue"
+      ]
+    }
+  }
+}

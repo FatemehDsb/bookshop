@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reading_list_entries",
+  "info": {
+    "singularName": "reading-list-entry",
+    "pluralName": "reading-list-entries",
+    "displayName": "ReadingListEntry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reading_list_entries"
+    },
+    "book": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::book.book",
+      "inversedBy": "reading_list_entries"
+    }
+  }
+}
